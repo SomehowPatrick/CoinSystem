@@ -1,0 +1,6 @@
+name: Testplugin
+version: '${version}'
+main: com.github.somehowpatrick.testplugin.Testplugin
+api-version: 1.18
+commands:
+  coins:
