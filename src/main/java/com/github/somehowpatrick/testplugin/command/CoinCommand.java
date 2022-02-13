@@ -23,6 +23,10 @@ public record CoinCommand(Testplugin testplugin) implements CommandExecutor {
             return false;
         }
         if (args.length == 1) {
+            if (args[0].equalsIgnoreCase("help")) {
+                printHelp(player);
+                return false;
+            }
             var target = Bukkit.getPlayer(args[0]);
             if (target == null) {
                 player.sendMessage("§cDer Spieler §e" + args[0] + "§c ist nicht online!");
